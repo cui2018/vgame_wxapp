@@ -1,0 +1,66 @@
+<!--pages/can/can.wxml-->
+<view>
+  <image src="../../img/canvasbac.jpg" class="bacabo"></image>
+  <canvas id="canvasidid" canvas-id="myCanvasid"></canvas>
+  <canvas id="canvasid" canvas-id="myCanvas"></canvas>
+  <view class="coverdiv">
+    <view class="mate" bindtap="swicondition">匹配好友</view>
+    <view class="playagain" bindtap="playnow">再玩一次</view>
+  </view>
+
+  <view class="bottomalert" wx:if="{{condition}}" animation='{{animationData}}'>
+    <view class="relaytext">
+      <button open-type="share" plain="true">111111</button>
+      <view class="coview">
+        <image src="../../img/weixin.png"></image>
+        <view>微信</view>
+      </view>
+      <view bindtap='tap' class="coview">
+        <image src="../../img/pengyouquan.png"></image>
+        <view>朋友圈</view>
+      </view>
+      <view class="coview" bindtap='showcon'>
+        <image src="../../img/buzhayan.png"></image>
+        <view>不眨眼</view>
+      </view>
+    </view>
+    <view class="relayclose" bindtap="shareless">取消</view>
+  </view>
+  <cover-view class="molealert" wx:if="{{condition}}" bindtap="shareless">
+
+  </cover-view>
+  <cover-view class="newstate" wx:if="{{newstate}}">
+    <cover-image src="../../img/canvastitle.png" class="newstatetitle"></cover-image>
+    <cover-image src="../../img/mateimg.png" class="newstatecontent"></cover-image>
+    <cover-image src="../../img/qushishi.png" class="newstatefooter" bindtap="editstate"></cover-image>
+  </cover-view>
+  <block wx:if="{{concern}}">
+    <cover-view class='concernbox'>
+      <cover-image src="../../img/concernid.png" class="concernboxurl"></cover-image>
+      <cover-view bindtap="close" class="close">
+        <cover-image src="../../img/close.png"></cover-image>
+      </cover-view>
+    </cover-view>
+
+  </block>
+  <cover-view class='publicbox'>
+    <cover-view class='public' bindtap='toindex'>
+      <cover-image src='../../img/homelin.png'></cover-image>
+    </cover-view>
+  </cover-view>
+  
+  <cover-view class='writedis' bindtap='writedis'>
+    <cover-view class='writeimg'>
+      <cover-image src='../../img/writedis.png'></cover-image>
+    </cover-view>
+    <cover-view class='writetext'>写评价</cover-view>
+  </cover-view>
+  <cover-view class="endalert" wx:if="{{endresult}}">
+    <cover-view class="endanalyse">
+      <!-- <cover-image class="loadingleft" src="../../img/endany.png" ></cover-image> -->
+      <!-- 动图 -->
+      <cover-image class="loadingpic" src="../../img/loading.gif"></cover-image>
+    </cover-view>
+  </cover-view>
+
+</view>

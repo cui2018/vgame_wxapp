@@ -1,0 +1,13 @@
+<view class="distextbox">
+  <!-- <view class='starbox'>
+    <view class='stars'>
+      <block>
+        <image src='../../img/{{item}}.png' data-num="{{index}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+      </block>
+    </view>
+    <view class='score'>{{starnum}}.0分</view>
+  </view> -->
+  <view class='disscon'>
+    <input placeholder='快来发表你的想法吧' placeholder-style="color:#999;font-size:24rpx;" auto-focus></input>
+  </view>
+</view>

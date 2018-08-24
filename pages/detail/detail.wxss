@@ -1,0 +1,414 @@
+.detailbox{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  /* background: url('http://video.cdn.edisonluorui.com/filmimgs/banner1.png'); */
+  background-size: 100% 100%;
+}
+.bgimg{
+  position:absolute;
+  background-size:cover;
+  z-index:-1;
+  left:0;
+  right:0;
+  top:0;
+  height:954rpx;
+  width:100%;
+
+}
+.detail{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.7);
+}
+.title{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 132rpx;
+  font-size: 40rpx;
+  color: #fff;
+  font-weight: 700;
+}
+.scorebox{
+  width: 670rpx;
+  margin: 0 auto;
+}
+.stars{
+  display: inline-block;
+}
+.stars image{
+  width: 24rpx;
+  height: 23rpx;
+}
+.score{
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+.moneynum{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 10rpx;
+  font-size: 30rpx;
+  font-weight: 700;
+  color: #fff;
+}
+.intro{
+  width: 670rpx;
+  margin: 0 auto;
+  margin-top: 50rpx;
+  font-size: 26rpx;
+  color: #fff;
+}
+.lockbox{
+  position: absolute;
+  top: 600rpx;
+  left: 30rpx;
+  font-size: 0;
+  right: 30rpx;
+  height: 90rpx;
+}
+.playbox{
+  display: inline-block;
+  position: relative;
+}
+.lockbtn{
+  position: absolute; 
+  top: 0rpx;
+  left: 0rpx; 
+  width: 170rpx;
+  height:90rpx; 
+  z-index: 1000;
+  background: transparent;
+}
+.lockbtn::after{
+  border: none;
+}
+.lockimg{
+  display: inline-block;
+  width: 90rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+}
+.lockimg image{
+  display: inline-block;
+  width: 26rpx;
+  height: 43rpx;
+  transform: translateY(23.5rpx);  
+  margin-left:10rpx;
+
+
+}
+.locktext{
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size:30rpx;
+  font-weight: 500;
+  transform: translateY(10rpx);
+  color: #fff;
+}
+.freeplay{
+  display: inline-block;
+  padding-left: 20rpx;
+  font-size:30rpx;
+  font-weight: 500;
+  /* padding:0 20rpx; */
+  /* border-left: 1rpx solid #fff; */
+  transform: translateY(10rpx);
+  color: #FFD400;
+}
+.freeplay::before{
+  content:'';
+  display: inline-block;
+  width: 3rpx;
+  height: 26rpx;
+  margin-right: 20rpx;
+  transform: translateY(2rpx);
+  background: #fff;
+}
+.publicbox{
+  position: fixed;
+  right: 72rpx;
+  bottom: 98rpx;
+  width: 84rpx;
+  height: 84rpx;
+  text-align: center;
+  font-size: 0;
+  z-index: 100;
+  /* background: linear-gradient(#3a21c7, #ac4ba1); */
+  border-radius: 50%;
+}
+.discussbox{
+  position: absolute;
+  right: 200rpx;
+  bottom: 88rpx;
+  text-align: center;
+}
+.discussimg{
+  width: 59rpx;
+  height: 59rpx;
+}
+.discussimg image{
+  width: 100%;
+  height: 100%;
+}
+.discussnum{
+  margin-top: 6rpx;
+  font-size: 22rpx;
+  color: #fff;
+}
+.public{
+  display: inline-block;
+  width: 84rpx;
+  height: 84rpx;
+  /* transform: translateY(6rpx); */
+  background: #fff;
+  border-radius: 50%;
+}
+.public image{
+  display: inline-block;
+  width: 84rpx;
+  height: 84rpx;
+  /* transform: translateY(4rpx); */
+  border-radius: 50%;
+}
+.alertcon{
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 140rpx 100rpx;
+  font-size: 36rpx;
+  color: #2e2e2e;
+}
+.alertp{
+  width: 415rpx;
+  text-align: center;
+  font-size: 48rpx;
+  line-height: 58rpx;
+  color: #2e2e2e;
+  font-weight: 500;
+  transform: translateY(40rpx);
+  /* border-bottom: 2rpx #d1d1d1 dotted; */
+}
+.alertp text{
+  color: #ff5555;
+}
+.alertnum{
+  font-size: 34rpx;
+  color: #c2c2c2;
+  text-align: center;
+  font-weight: 200;
+} 
+.cardbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.7);
+}
+.cardback{
+  width: 646rpx;
+  height: 661rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+}
+.cardback image{
+  width: 100%;
+  height: 100%;
+}
+.cardimg{
+  position: absolute;
+  top: 140rpx;
+  width: 100%;
+  /* height: 480rpx; */
+  text-align: center;
+  /* height: 214rpx; */
+} 
+.cardimg image{
+  display: inline-block;
+  width: 640rpx;
+  height: 540rpx;
+  /* margin: 0 auto; */
+  /* width: 100%;
+  height: 100%; */
+}
+.cardbtn{
+  width: 366rpx;
+  height: 71rpx;
+  margin: 0 auto;
+  margin-top: 100rpx;
+  line-height: 71rpx;
+  text-align: center;
+  background: #ffd400;
+  border-radius: 36rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+ .disbox{
+  position: absolute;
+  width: 100%;
+  /* height:600rpx;  */
+  /* bottom: 0; */
+  top: 900rpx;
+  left: 0;
+  background: #fff;
+} 
+.nodis{
+  /* position: absolute;
+  width: 100%;
+   top: 954rpx; 
+  left: 0;
+  background: #fff; */
+  position:absolute;
+width:100%;
+top:954rpx;
+left:0;
+background:#fff;
+
+  
+}
+.commentbot{
+  padding-bottom:98rpx;
+
+}
+.dialogbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.dialog{
+  position: relative;
+  width: 617rpx;
+  height: 460rpx;
+  margin: 0 auto;
+  margin-top: 330rpx;
+}
+.dialog image{
+  width: 100%;
+  height: 100%;
+}
+.close{
+  position: absolute;
+  right: 50rpx;
+  top: 55rpx;
+  width: 31rpx;
+  height: 31rpx;
+  padding: 5rpx;
+}
+.close image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 200rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+.btn{
+  position: absolute;
+  bottom: 28rpx;
+  left: 181rpx;
+  width: 254rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: center;
+  background: #ff5555;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}
+.dialogsharebtn{
+  position: absolute;
+  bottom: 28rpx;
+  left: 181rpx;
+  width: 254rpx;
+  height: 65rpx;
+  background: transparent;
+}
+
+/*查看结果  */
+.watchresult{
+  width: 165rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  border-radius:33rpx;
+  font-size: 26rpx;
+  background: #FFD508;
+  text-align: center;
+  float: right;
+  margin-top: 12.5rpx;
+}
+.writedis{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #fff;
+  text-align: center;
+}
+.writeimg{
+  /* display: inline-block; */
+  float: left;
+  width: 37rpx;
+  height: 37rpx;
+  line-height: initial;
+  margin-top: 30.5rpx;
+  padding-left: 300rpx;
+}
+.writeimg cover-image{
+  width: 100%;
+  height: 100%;
+  /* transform: translateY(6rpx); */
+  vertical-align:middle;
+
+}
+.writetext {
+  /* display: inline-block; */
+   float: left;
+  margin-left: 12rpx;
+  font-size: 26rpx;
+  color: #000;
+  font-weight: 700;
+  line-height: 98rpx;
+  width: 100rpx;
+}
+.bacfff{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top:954rpx;
+  bottom: 0;
+  background: #fafafa;
+}
+.watbtn{
+  position: absolute;
+  top: 0;
+  height:90rpx;
+  width: 165rpx;
+  line-height:65rpx;
+  border-radius:33rpx;
+  right: 0;
+  background: transparent;
+}
+
+.watbtn::after{
+border:none;
+}

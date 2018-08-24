@@ -1,0 +1,81 @@
+/* pages/gameover/gameover.wxss */
+.bac{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+ 
+}
+.bac image{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.gametitle{
+  width: 546rpx;
+  height: 130rpx;
+  margin: auto;
+  margin-top: 300rpx;
+}
+.gametitle image{
+  width: 100%;
+  height: 100%;
+}
+.mole{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+   background: rgba(0, 0, 0, 0.7)
+}
+.gamecontent{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.gamecontent text{
+  width: 100%;
+  color: #fff;
+  text-align: center;
+  font-size: 30rpx;
+  display: block;
+  margin-top: 100rpx;
+}
+
+.coverdiv{
+  position: absolute;
+  top: 700rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 800;
+}
+.coverdiv .btn{
+  width: 350rpx;
+  height: 90rpx;
+  margin: auto;
+  line-height: 90rpx;
+  border-radius: 20rpx;
+  border: 2px solid #000000;
+  margin-bottom: 20rpx;
+  background:#fff;
+  font-size: 30rpx;
+
+}
+.coverdiv .playagain{
+  background: #FFD400;
+}
+.sharebtn{
+  color: #fff;
+  font-size: 22rpx
+}

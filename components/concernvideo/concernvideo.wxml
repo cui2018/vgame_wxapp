@@ -1,0 +1,12 @@
+<!--components/concernvideo/concernvideo.wxml-->
+<cover-view class="concernbox">
+  <cover-view class='clickbtn'>
+    <cover-image src='../../img/click.png'></cover-image>
+  </cover-view>
+  <cover-view class='concern'>
+    <cover-image src='../../img/concern.png'></cover-image>
+  </cover-view>
+  <cover-view class='close' bindtap='close'>
+    <cover-image src='../../img/close.png'></cover-image>
+  </cover-view>
+</cover-view>

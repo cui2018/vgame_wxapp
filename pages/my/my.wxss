@@ -1,0 +1,109 @@
+ .mybox{
+  position: absolute;
+  z-index: -2;
+  width: 100vw;
+  height: 100vh;
+  background: #EDEDED;
+} 
+.mytop{
+  position: relative;
+  width: 750rpx;
+  height: 320rpx;
+  overflow: hidden;
+}
+.mytop button{
+  position: absolute;
+  font-size:24rpx;
+  text-align:center;
+  top:194rpx;
+  width: 200rpx;
+  left: 275rpx; 
+  line-height: 48rpx;
+  height: 48rpx;
+  /* background: transparent; */
+  color: #000;
+
+}
+.mytop image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.namebox{
+  position: absolute;
+  top: 30rpx;
+  left: 303rpx;
+  width: 145rpx;
+  height: 145rpx;
+  z-index: 1;
+  background: linear-gradient(#6F0676,#42056C);
+  border-radius: 50%;
+}
+.namebox image{
+  display: inline-block;
+  width: 129rpx;
+  height: 129rpx;
+  transform: translateY(8rpx) translateX(8rpx);
+  /* transform: translateX(8rpx); */
+  border-radius: 50%;
+}
+.title{
+  /* position: absolute; */
+  color: #fff;
+  font-size: 24rpx;
+  text-align: center;
+  margin-top: 194rpx;
+}
+.list{
+
+}
+.item{
+  width: 750rpx;
+  height: 100rpx;
+  margin-top: 18rpx;
+  line-height: 100rpx;
+  background: #fff;
+}
+.titleimg{
+  float: left;
+  margin-left: 27rpx;
+  width: 47rpx;
+  height: 47rpx;
+}
+.titleimg image{
+  transform: translateY(10rpx);
+  width: 100%;
+  height: 100%;
+}
+.titlename{
+  float: left;
+  margin-left: 20rpx;
+  font-size: 24rpx;
+  font-weight: 500;
+}
+.titlearrow{
+  float: left;
+  width: 14rpx;
+  height: 25rpx;
+  margin-left: 523rpx;
+}
+.titlearrow image{
+  width: 100%;
+  height: 100%;
+}
+.contactus{
+  position:fixed;
+  right:57rpx;
+  bottom:80rpx;
+  width:125rpx;
+  height:125rpx;
+  background: transparent;
+  border: none;
+z-index:1000;
+opacity:0;
+
+
+}

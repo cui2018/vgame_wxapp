@@ -1,0 +1,54 @@
+.dialogbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+}
+.dialog{
+  position: relative;
+  width: 617rpx;
+  height: 460rpx;
+  margin: 0 auto;
+  margin-top: 330rpx;
+}
+.dialog image{
+  width: 100%;
+  height: 100%;
+}
+.close{
+  position: absolute;
+  right: 50rpx;
+  top: 55rpx;
+  width: 31rpx;
+  height: 31rpx;
+  padding: 5rpx;
+}
+.close image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 200rpx;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #2e2e2e;
+}
+.btn{
+  position: absolute;
+  bottom: 28rpx;
+  left: 181rpx;
+  width: 254rpx;
+  height: 65rpx;
+  line-height: 65rpx;
+  text-align: center;
+  background: #ff5555;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 10rpx;
+}

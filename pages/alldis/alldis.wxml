@@ -1,0 +1,45 @@
+<view class="alldisbox">
+  <scroll-view scroll-y>
+    <view class="discussbox">
+      <view class='discuss'>
+        <view class='discusstop'>
+          <view class='title'>{{times}}人评价</view>
+          <view class='num'>{{score}}</view>
+          <view class='score'>
+            <image src='../../img/{{item}}.png' data-num="{{index}}" wx:for="{{stars}}" wx:key="{{key}}"></image>
+          </view>
+        </view>
+        <view class='list'>
+          <view class='item' wx:for="{{discussdata}}" wx:key="{{key}}">
+            <view class='itemleft'>
+              <image src='{{item.headimg}}'></image>
+            </view>
+            <view class='itemright'>
+              <view class='itemtop'>
+                <view class='topleft'>
+                  <view class='topname'>{{item.nick}}</view>
+                  <view class='topstar'>
+                    <block>
+                      <image src='../../img/{{star}}.png' data-num="{{index}}" wx:for="{{item.score}}" wx:for-item="star" wx:key="{{key}}"></image>
+                    </block>
+                  </view>
+                </view>
+                <view class='topright'>
+                  <view class='time'>{{item.com_time}}</view>
+                </view>
+              </view>
+              <view class='itemcon'>{{item.game_com}}</view>
+            </view>
+          </view> 
+        </view>
+        <view class='alldis'>{{page <= total ? "加载更多":"暂无更多"}}</view>
+        <!-- <view class='writedis'>
+          <view class='writeimg'>
+            <image src='../../img/writedis.png'></image>
+          </view>
+          <view class='writetext'>写评价</view>
+        </view>  -->
+      </view>
+    </view>
+  </scroll-view>
+</view>

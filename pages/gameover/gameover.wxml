@@ -1,0 +1,26 @@
+<!--pages/gameover/gameover.wxml-->
+<view>
+  <view class="bac">
+    <image src="{{gameurl}}"></image>
+  </view>
+  <view class="mole">
+  </view>
+  <view class="gamecontent">
+    <view class="gametitle">
+      <image src="../../img/gameover.png"></image>
+    </view>
+    <text>
+        令人捉急！就差那么一点点就成功啦!
+    </text>
+    <view class="coverdiv">
+      <view class="mate btn" bindtap="swicondition">从新开始</view>
+      <button open-type="share" plain="" type="share" class="playagain btn">分享好友</button>
+       <view class="sharebtn">
+        转发好友再给一次重新做人的机会
+    </view>
+    </view>
+    
+  </view>
+
+
+</view>

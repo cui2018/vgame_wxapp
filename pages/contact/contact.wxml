@@ -1,0 +1,32 @@
+<view class="contactbox">
+   <canvas canvas-id="contactus"></canvas>
+  <view class='title'>
+    <image src='../../img/contact_title.png'></image>
+  </view>
+  <view class='code' bindlongtap="tap">
+    <image src='../../img/contact_code.png'></image>
+  </view>
+  <view class='detailbox'>
+    <view class='detail'>长按屏幕保存二维码</view>
+    <!-- <view class='detail'>全国最火爆《互动式电影》游戏平台</view>
+    <view class='detail'>关注公众号《潮人小罗》</view>
+    <view class='detail'>更多精彩等着你</view> -->
+  </view>
+  <!-- <view class='feedbox'>
+    <view class='introbox'>
+      <view class='intro'>若您有任何问题或建议</view>
+      <view class='intro'>记得反馈给我哦</view>
+    </view>
+    <view class='feedbtn' bindtap='tofeedback'>去吐槽</view>
+  </view> -->
+  <view class='contact_bottom'>
+    <view class='bottom_img'>
+      <image src='../../img/contact_img.png'></image>
+    </view>
+    <view class='bottom_intr'>不眨眼互动电影游戏 品质好 更新快</view>
+  </view>
+  <view>
+    <cservice></cservice>
+     <button open-type="contact" class="contactus" ></button>
+  </view>
+</view>

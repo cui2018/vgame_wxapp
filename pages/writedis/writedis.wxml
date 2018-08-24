@@ -1,0 +1,28 @@
+<view class="writebox">
+  <view class='top'>
+    <view class='toptitle'>总体</view>
+    <view class='topstar'>
+      <image src='../../img/{{item}}.png' data-num="{{index+1}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+    </view>
+    <view class='score'>{{starnum}}.0分</view>
+  </view>
+  <view class='write'>
+    <textarea value='{{writedata}}' placeholder='100个字符以内~' placeholder-style='color:#ABAAAA;' bindinput='writedis'></textarea>
+  </view>
+  <view class='btn {{nodis ? "unbtn" : "acbtn"}}' bindtap='subdis'>{{comstate ? "修改评价" : "评价"}}</view>
+
+  <view class="molebtn" wx:if="{{scorebtn}}">
+    <view class="popup">
+      <view class="popuptitle">请评分</view>
+      <view class='popuptopstar'>
+        <view class='stargroup'>
+          <image src='../../img/{{item}}.png' data-num="{{index+1}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+        </view>  
+      </view>
+      <view class="botbtn">
+        <view class="cancelbtn" bindtap="cancelscore">取消</view>
+        <view class="sendout {{starnum == 0?' baccolor':'bluecolor'}}" bindtap="subdis">确定</view>
+      </view>
+    </view>
+  </view>
+</view>

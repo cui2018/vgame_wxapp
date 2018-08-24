@@ -1,0 +1,17 @@
+<view class="scorebox">
+  <view class='score'>
+    <image src='../../img/disback.png'></image>
+    <view class='close' bindtap='closescore'>
+      <image src='../../img/close.png'></image>
+    </view>
+    <view class='content'>
+      <view class='title'>来说点好听的吧!</view>
+      <view class='starbox'>
+        <block>
+          <image src='../../img/{{item}}.png' data-num="{{index}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+        </block>
+      </view>
+    </view>
+    <view class='btn' bindtap='clickbtn'>评价一下</view>
+  </view>
+</view>

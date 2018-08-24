@@ -1,0 +1,87 @@
+<view class="discussbox">
+  <view class='discuss'>
+    <view class='discusstop'>
+      <view class='title'>评价</view>
+      <view class='num'>({{times}})</view>
+      <!-- <view class='del' bindtap='close'>
+        <image src='../../img/close.png'></image>
+      </view> -->
+    </view>
+    <view class='list' >
+      <view  wx:for="{{discussdata}}" wx:key="{{key}}" class="item">
+        <view class='itemleft'>
+          <image src='{{item.headimg}}'></image>
+        </view>
+        <view class='itemright'>
+          <view class='itemtop'>
+            <view class='topleft'>
+              <view class='topname'>{{item.nick}}</view>
+              <view class='topstar'>
+                <block>
+                  <image src='../../img/{{star}}.png' data-num="{{index}}" bindtap='selestar' wx:for="{{item.score}}" wx:for-item="star" wx:key="{{key}}"></image>
+                </block>
+              </view>
+            </view>
+            <view class='topright'>
+              <view class='time'>{{item.com_time}}</view>
+            </view>
+          </view>
+          <view class='itemcon'>{{item.game_com}}</view>
+        </view>
+      </view>
+      <!-- <view class='item'>
+        <view class='itemleft'>
+          <image src='../../img/logo.jpg'></image>
+        </view>
+        <view class='itemright'>
+          <view class='itemtop'>
+            <view class='topleft'>
+              <view class='topname'>主演也</view>
+              <view class='topstar'>
+                <block>
+                  <image src='../../img/{{item}}.png' data-num="{{index}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+                </block>
+              </view>
+            </view>
+            <view class='topright'>
+              <view class='time'>2018-05-23</view>
+            </view>
+          </view>
+          <view class='itemcon'>太好玩了，哈哈哈哈哈哈哈哈哈，太好玩了，哎呀妈也太好玩了啊啊啊啊啊啊啊。</view>
+        </view>
+      </view>
+      <view class='item'>
+        <view class='itemleft'>
+          <image src='../../img/logo.jpg'></image>
+        </view>
+        <view class='itemright'>
+          <view class='itemtop'>
+            <view class='topleft'>
+              <view class='topname'>主演也</view>
+              <view class='topstar'>
+                <block>
+                  <image src='../../img/{{item}}.png' data-num="{{index}}" bindtap='selestar' wx:for="{{stars}}" wx:key="{{key}}"></image>
+                </block>
+              </view>
+            </view>
+            <view class='topright'>
+              <view class='time'>2018-05-23</view>
+            </view>
+          </view>
+          <view class='itemcon'>太好玩了，哈哈哈哈哈哈哈哈哈，太好玩了，哎呀妈也太好玩了啊啊啊啊啊啊啊。</view>
+        </view>
+      </view> -->
+    </view>
+    <view class='alldis' wx:if="{{disdata.length == 0}}">暂无评价</view>
+    <view class='alldis' wx:if="{{disdata.length != 0}}" bindtap='alldis'>查看全部</view>
+    <!-- <view class='writedis' wx:if="{{writedis}}" bindtap='writedis'>
+      <view class='writeimg'>
+        <image src='../../img/writedis.png'></image>
+      </view>
+      <view class='writetext'>写评价</view>
+    </view>  -->
+    <!-- <view class='disscon'>
+      <input placeholder='快来发表你的想法吧' placeholder-style="color:#999;font-size:24rpx;" bindtap='write'></input>
+    </view> -->
+  </view>
+</view>

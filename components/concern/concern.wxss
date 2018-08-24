@@ -1,0 +1,51 @@
+.concernbox{
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-size: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index:4000;
+}
+.clickbtn{
+  position: absolute;
+  top: 30rpx;
+  right: 160rpx;
+  transform: rotate(-45deg);
+  animation: clickhand 1s infinite;
+  width: 84rpx;
+  height: 48rpx;
+}
+.clickbtn image{
+  width: 100%;
+  height: 100%;
+}
+@keyframes clickhand{
+  from {top:30px;}
+  to {top:20px;}
+}
+.concern{
+  position: absolute;
+  top: 124rpx;
+  left: 81.5rpx;
+  width: 587rpx;
+  height: 827rpx;
+}
+.concern image{
+  width: 100%;
+  height: 100%;
+}
+.close{
+  position: absolute;
+  right: 120rpx;
+  width: 62rpx;
+  height: 62rpx;
+  padding: 5rpx;
+  left: 344rpx;
+  top: 1000rpx;
+}
+.close image{
+  width: 100%;
+  height: 100%;
+}

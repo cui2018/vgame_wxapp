@@ -1,0 +1,6 @@
+<view class="box">
+  <view class='imgbox'>
+    <image src='../../img/noservice.png'></image>
+  </view>
+  <view class='content'>别慌，马上就好~</view>
+</view>

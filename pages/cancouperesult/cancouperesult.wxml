@@ -1,0 +1,16 @@
+<!--pages/canfri/canfri.wxml-->
+<view>
+  <canvas id="canvasidid" canvas-id="myCanvasid"></canvas>
+  <canvas id="canvasid" canvas-id="myCanvas"></canvas>
+  <cover-view class="molebtn">
+    <cover-view class="relieve" bindtap="relieve">解除匹配</cover-view>
+    <cover-view class="reserve" bindtap="tap">保存图片</cover-view>
+  </cover-view>
+  <cover-view class="motalalert" wx:if="{{endresult}}">
+    <cover-view class="endanalyse">
+      <!-- <cover-image class="loadingleft" src="../../img/endany.png"></cover-image> -->
+      <!-- 动图 -->
+      <cover-image class="loadingpic" src="../../img/loading.gif"></cover-image>
+    </cover-view>
+  </cover-view>
+</view>

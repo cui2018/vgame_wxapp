@@ -1,0 +1,22 @@
+.box{
+  width: 100vw;
+  height: 100vh;
+  background: #1C0630;
+  overflow: hidden;
+  text-align: center;
+}
+.imgbox{
+  width: 535rpx;
+  height: 400rpx;
+  margin: 0 auto;
+  margin-top: 300rpx;
+}
+.imgbox image{
+  width: 100%;
+  height: 100%;
+}
+.content{
+  font-size: 36rpx;
+  margin-top: 67rpx;
+  color: #fff;
+}

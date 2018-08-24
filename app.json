@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/contact/contact",
+    "pages/type/type",
+    "pages/typemore/typemore",
+    "pages/detail/detail",
+    "pages/feedback/feedback",
+    "pages/my/my",
+    "pages/buy/buy",
+    "pages/subscribe/subscribe",
+    "pages/writedis/writedis",
+    "pages/alldis/alldis",
+    "components/discuss/discuss",
+    "components/distext/distext",
+    "pages/video/video",
+    "components/concernvideo/concernvideo",
+    "components/cservice/cservice",
+    "pages/canpersonresult/canpersonresult",
+    "pages/cancouperesult/cancouperesult",
+    "pages/newhand/newhand",
+    "pages/service/service",
+    "pages/gameover/gameover"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1C0630",
+    "navigationBarTitleText": "不眨眼",
+    "navigationBarTextStyle": "light",
+    "backgroundColor": "#1C0630"
+  },
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#FFD400",
+    "backgroundColor": "#1C0630",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "img/index.png",
+        "selectedIconPath": "img/index_action.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "img/my.png",
+        "selectedIconPath": "img/my_action.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

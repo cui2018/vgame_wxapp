@@ -1,0 +1,169 @@
+.writebox {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: #f0f0f0;
+}
+
+.top {
+  background: #fff;
+  width: 100%;
+  height: 104rpx;
+  line-height: 104rpx;
+  box-sizing: border-box;
+  /* margin: 0 27rpx; *//* border-bottom: 3rpx solid #000; */
+}
+
+.top::after {
+  display: block;
+  content: '';
+  clear: both;
+  /* width: 696rpx; *//* height: 3rpx; *//* margin: 0 auto;
+  background: #000; */
+}
+
+.toptitle {
+  float: left;
+  margin-left: 25rpx;
+  font-size: 28rpx;
+  color: #000;
+  font-weight: 500;
+}
+
+.topstar {
+  float: left;
+  margin-left: 20rpx;
+}
+
+.topstar image {
+  margin-left: 20rpx;
+  width: 39rpx;
+  height: 37rpx;
+  transform: translateY(8rpx);
+}
+
+.topstar image:first-child {
+  margin-left: 0;
+}
+
+.score {
+  float: right;
+  margin-right: 18rpx;
+  font-size: 25rpx;
+  color: #777;
+}
+
+.write {
+  width: 100%;
+  height: 307rpx;
+  background: #fff;
+  margin-top: 3rpx;
+}
+
+.write textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-size: 26rpx;
+  padding: 27rpx;
+}
+
+.btn {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 32rpx;
+  font-weight: 500;
+}
+
+.unbtn {
+  background: #cecece;
+  color: #9f9f9f;
+}
+
+.acbtn {
+  background: #ffd508;
+  color: #010101;
+}
+
+.molebtn {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.molebtn .popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 556rpx;
+  height: 324rpx;
+  background: #fff;
+  transform: translate(-50%, -50%);
+  border-radius: 20rpx;
+}
+
+.popuptitle {
+  font-size: 36rpx;
+  line-height: 36rpx;
+  margin-top: 24rpx;
+  text-align: center;
+  color: #000;
+}
+
+.botbtn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70rpx;
+  line-height: 70rpx;
+  display: flex;
+  border-top: 1rpx solid #f3f3f3;
+  font-size: 36rpx;
+}
+
+.botbtn  .sendout {
+  width: 49%;
+  height: 70rpx;
+  text-align: center;
+  font-size: 36rpx;
+  border-left: 1px solid #f3f3f3;
+}
+
+.botbtn  .cancelbtn {
+  width: 50%;
+  height: 70rpx;
+  text-align: center;
+  font-size: 36rpx;
+}
+
+.popuptopstar {
+  /* width: 500rpx; */
+  height: 192rpx;
+  margin: auto;
+}
+.stargroup{
+  text-align: center;
+}
+.popuptopstar image {
+  width: 47rpx;
+  height: 44rpx;
+  margin-top: 74rpx;
+  margin-left: 1rpx;
+  margin-right: 2rpx;
+}
+
+.baccolor {
+  color: #000;
+}
+
+.bluecolor {
+  color: #005aff;
+}

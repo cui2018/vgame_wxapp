@@ -1,0 +1,10 @@
+<view class="dialogbox">
+  <view class='dialog'>
+    <image src='../../img/feree.png'></image>
+    <view class='close' bindtap='close'>
+      <image src='../../img/close.png'></image>
+    </view>
+    <view class='content'>分享成功</view>
+    <view class='btn'>继续</view>
+  </view>
+</view>

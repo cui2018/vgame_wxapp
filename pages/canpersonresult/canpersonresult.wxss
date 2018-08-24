@@ -1,0 +1,324 @@
+/* pages/can/can.wxss */
+.bacabo{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100vh;
+}
+#canvasidid{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 810rpx;
+}
+#canvasid{
+  position: absolute;
+  left: -750rpx;
+  top: 0;
+  bottom: 0;
+  width: 750rpx;
+  height: 100vh;
+}
+.molealert{
+  position: fixed;
+  top: 0;
+  height: 810rpx;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 500;
+}
+.bottomalert{
+  position: absolute;
+  bottom: 0rpx;
+  left: 0;
+  /* height:350rpx; */
+  top: 810rpx;
+  right: 0;
+   z-index: 1000; 
+  
+
+}
+.relaytext{
+  /* height: 250rpx; */
+  position: absolute;
+  top: 0;
+  bottom: 100rpx;
+  left: 0;
+  right: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.relaytext button{
+  position: absolute;
+  /* z-index:1000; */
+  opacity: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width:250rpx;
+   height: 250rpx;
+   line-height: 250rpx;
+   border: 1px solid transparent;
+   display: block;
+   color: transparent;
+}
+.relaytext .coview{
+  width: 33.3%;
+  text-align: center;
+}
+.relaytext view{
+  font-size: 26rpx;
+  
+}
+.bottomalert image{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 100%;
+  display: block;
+  margin: auto;
+  /*margin-top: 60rpx;*/
+}
+.relayclose{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #E9E9E9;
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+  line-height: 98rpx;
+}
+.sharebtn{
+  position: absolute;
+  width: 250rpx;
+  height: 70rpx;
+  border-radius: 10rpx;
+  left: 250rpx;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  /* z-index: 100; */
+}
+.sharefri{
+  top: 900rpx;
+  background: #FFD400;
+}
+.playnoe{
+  background: #D0D0D0;
+  top: 1030rpx;
+}
+.sharetwxt{
+  position: absolute;
+  top: 820rpx;
+  left: 146rpx;
+  right: 0;
+  line-height: 28rpx;
+  width: 456rpx;
+
+}
+
+/*  评论  */
+.writebtn{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  line-height: 97rpx;
+  text-align: center;
+  background: #fff;
+}
+
+/*匹配好友  */
+
+.coverdiv{
+  position: absolute;
+  top: 818rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 800;
+}
+.coverdiv view{
+  width: 350rpx;
+  height: 90rpx;
+  margin: auto;
+  line-height: 90rpx;
+  border-radius: 20rpx;
+  border: 2px solid #000000;
+  margin-bottom: 20rpx;
+}
+.coverdiv .playagain{
+  background: #FFD400;
+}
+.writedis{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #fff;
+  text-align: center;
+}
+.writeimg{
+  display: inline-block;
+  width: 37rpx;
+  height: 37rpx;
+}
+.writeimg image{
+  width: 100%;
+  height: 100%;
+  transform: translateY(6rpx);
+}
+.writetext {
+  display: inline-block;
+  margin-left: 12rpx;
+  font-size: 26rpx;
+  color: #000;
+  font-weight: 700;
+}
+
+.newstate{
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
+  background: rgba(0,0,0,0.8);
+
+}
+.newstate .newstatetitle{
+  width: 302rpx;
+  height: 45rpx;
+  display: block;
+  margin: auto;
+  margin-top: 175rpx;
+}
+.newstate .newstatecontent{
+  width: 554rpx;
+  height: 719rpx;
+  display: block;
+  margin: auto;
+}
+.newstate .newstatefooter{
+   width: 362rpx;
+  height: 110rpx;
+  display: block;
+  margin: auto;
+  margin-top: 24rpx;
+}
+.concernbox{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8)
+}
+.concernbox .concernboxurl{
+  width: 619rpx;
+  height: 697rpx;
+  margin-top: 20%;
+  margin-left: 65rpx;
+}
+.close{
+  position: absolute;
+  bottom: 200rpx;
+  width: 60rpx;
+  height: 60rpx;
+  left: 345rpx;
+}
+.close cover-image{
+  width: 100%;
+  height: 100%;
+}
+.publicbox{
+  position: fixed;
+  right: 72rpx;
+  bottom: 98rpx;
+  width: 84rpx;
+  height: 84rpx;
+  text-align: center;
+  font-size: 0;
+  z-index: 100;
+  /* background: linear-gradient(#3a21c7, #ac4ba1); */
+  border-radius: 50%;
+}
+.endalert{
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.endanalyse{
+  width:50rpx;
+  height:50rpx;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index:4000;
+  display: flex;
+  color:#FFD400;
+  
+}
+
+.loadingleft{
+  width:333rpx;
+  height:105rpx;
+}
+
+.loadingpic{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+.writedis{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 98rpx;
+  line-height: 98rpx;
+  background: #fff;
+  text-align: center;
+}
+.writeimg{
+  /* display: inline-block; */
+  float: left;
+  width: 37rpx;
+  height: 37rpx;
+  line-height: initial;
+  margin-top: 30.5rpx;
+  padding-left: 300rpx;
+}
+.writeimg cover-image{
+  width: 100%;
+  height: 100%;
+  /* transform: translateY(6rpx); */
+  vertical-align:middle;
+
+}
+.writetext {
+  /* display: inline-block; */
+   float: left;
+  margin-left: 12rpx;
+  font-size: 26rpx;
+  color: #000;
+  font-weight: 700;
+  line-height: 98rpx;
+  width: 100rpx;
+}

@@ -1,0 +1,12 @@
+{
+  "disableScroll": true,
+  "enablePullDownRefresh":true,
+  "navigationBarTitleText": "加载中请稍候...",
+  "usingComponents": {
+    "dialog": "../../components/dialog/dialog",
+    "alert": "../../components/alert/alert",
+    "concernvideo": "../../components/concernvideo/concernvideo",
+    "score": "../../components/score/score",
+    "discuss": "../../components/discuss/discuss"
+  }
+}

@@ -1,0 +1,104 @@
+<scroll-view scroll-y>
+  <view class='typebox'>
+    <!-- <view class='{{switchtab ? "switchboxactive" : "switchbox"}}' bindtap='switchtab'>
+      <view class='{{switchtab ? "circleright" : "circleleft"}}'></view>
+    </view>   -->
+    <!-- <view class='switchbox'>
+      <switch color='#FFD400'></switch>
+    </view> -->
+    <view class='types'>
+      <!-- <view class='typetop'>
+        <view class='sign'></view>
+        <view class='title'>展现实力</view>
+        <view class='more' bindtap='tomore'>更多></view>
+      </view> -->
+      <view class='typelist'>
+        <block wx:for="{{videos}}" wx:key="{{key}}">
+          <view class='typeitem' data-id="{{item.id}}" data-name="{{item.name}}" data-state="{{item.gameresult_state}}">
+            <form bindsubmit="sendform" report-submit="ture" data-id="{{item.id}}" data-name="{{item.name}}" data-state="{{item.gameresult_state}}">
+              <view class='imgbox'>
+                <image src='{{item.pic}}'></image>
+              </view>
+              <view class='iconbox'>
+                <image src='../../img/start.png'></image>
+              </view>
+              <view class='namebox'>
+                <view class='name'>{{item.name}}</view>
+                <view class='disnum'>{{item.score}}</view>
+              </view>
+              <view class='newbox' wx:if="{{item.gvideo_new}}">新</view>
+              <button formType="submit" class="formbtn"></button>
+            </form> 
+          </view>
+        </block>
+        <view class='typeitem'>
+            <view class='imgbox'>
+              <view class='imgtextbox'>
+                <view class='imgtext'>即将更新</view>
+                <view class='imgtext'>敬请期待</view>
+              </view>
+              <!-- <image src='../../img/type_expect.png'></image> -->
+            </view>  
+            <!-- <view class='namebox'>
+              <view class='name'>免费订阅 每周更新</view>
+            </view>  -->
+        </view>
+      </view>
+    </view>
+    <!-- <view class='types'>
+      <view class='typetop'>
+        <view class='sign'></view>
+        <view class='title'>高手进阶</view>
+        <view class='more'>更多></view>
+      </view>
+      <view class='typelist'>
+        <block>
+          <view class='typeitem'>
+            <view class='imgbox'>
+              <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528794410727&di=5198a6a81c2ae3a22d5827e1abf62c31&imgtype=0&src=http%3A%2F%2Fimages.china.cn%2Fattachement%2Fjpg%2Fsite1000%2F20160904%2Fb8aeed99a01e19362af22f.jpg'></image>
+            </view>
+            <view class='iconbox'>
+              <image src='../../img/lock.png'></image>
+            </view>
+            <view class='namebox'>
+              <view class='name'>狙击真名，玩会爱情</view>
+            </view>
+          </view>
+          <view class='typeitem'>
+            <view class='imgbox'>
+              <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528794410727&di=5198a6a81c2ae3a22d5827e1abf62c31&imgtype=0&src=http%3A%2F%2Fimages.china.cn%2Fattachement%2Fjpg%2Fsite1000%2F20160904%2Fb8aeed99a01e19362af22f.jpg'></image>
+            </view>
+            <view class='iconbox'>
+              <image src='../../img/lock.png'></image>
+            </view>
+            <view class='namebox'>
+              <view class='name'>狙击真名，玩会爱情</view>
+            </view>
+          </view>
+          <view class='typeitem'>
+            <view class='imgbox'>
+              <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528794410727&di=5198a6a81c2ae3a22d5827e1abf62c31&imgtype=0&src=http%3A%2F%2Fimages.china.cn%2Fattachement%2Fjpg%2Fsite1000%2F20160904%2Fb8aeed99a01e19362af22f.jpg'></image>
+            </view>
+            <view class='iconbox'>
+              <image src='../../img/lock.png'></image>
+            </view>
+            <view class='namebox'>
+              <view class='name'>狙击真名，玩会爱情</view>
+            </view>
+          </view>
+          <view class='typeitem'>
+            <view class='imgbox'>
+              <image src='https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1528794410727&di=5198a6a81c2ae3a22d5827e1abf62c31&imgtype=0&src=http%3A%2F%2Fimages.china.cn%2Fattachement%2Fjpg%2Fsite1000%2F20160904%2Fb8aeed99a01e19362af22f.jpg'></image>
+            </view>
+            <view class='iconbox'>
+              <image src='../../img/lock.png'></image>
+            </view>
+            <view class='namebox'>
+              <view class='name'>狙击真名，玩会爱情</view>
+            </view>
+          </view>
+        </block>
+      </view>
+    </view> -->
+  </view>
+</scroll-view>

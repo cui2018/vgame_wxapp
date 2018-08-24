@@ -1,0 +1,58 @@
+.feedbackbox{
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  padding: 0 26rpx;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-image: url('https://vgame-cdn.edisonluorui.com/filmimgs/index_back.jpg');
+  background-size: 100% 100%;
+}
+.feedform{
+  display: inline-block;
+  width: 100%; 
+  margin-top: 40rpx;
+}
+.feedname{
+  display: inline-block;
+  font-size: 28rpx;
+  color: #fff;
+  /* line-height: 21rpx; */
+}
+.feedcon{
+  width: 100%;
+  /* line-height: 79rpx; */
+  margin: 24rpx 0 ;
+  font-size: 0;
+  border: 1rpx solid #999;
+  border-radius: 10rpx;
+}
+.feedcon input{
+  height: 79rpx;
+  line-height: 79rpx;
+  color: #fff;
+  font-size:24rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.feedcon textarea{
+  box-sizing: border-box;
+  width: 100%;
+  height: 523rpx;
+  color: #fff;
+  font-size:24rpx;
+  padding:20rpx;
+  margin: 0;
+}
+.feedbtn{
+  width: 100%;
+  height: 79rpx;
+  line-height: 79rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  background: #ffd400;
+  font-size: 30rpx;
+  color: #000;
+  font-weight: 700;
+  border-radius: 40rpx;
+}

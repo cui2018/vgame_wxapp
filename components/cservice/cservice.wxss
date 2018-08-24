@@ -1,0 +1,11 @@
+.servicebox{
+  position: fixed;
+  right: 57rpx;
+  bottom: 80rpx;
+  width: 125rpx;
+  height: 125rpx;
+}
+.servicebox image{
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,143 @@
+<block wx:if="{{endanalyse==1}}">
+  <video wx:for="{{videos}}" wx:key="index" id="video{{index}}" videoId="video{{index}}" src="{{loader[index].src}}" controls="{{false}}" autoplay="true" show-center-play-btn="false" enable-progress-gesture="false" class="hiding_{{hide[index]}} {{pis ? pis : rotate}}"
+    bindplay="onplaying" bindended="ended" bindtimeupdate="timeupdate" data-i="{{index}}" data-name="{{loader[index].name}}" custom-cache="{{false}}" action="{{action[index]}}" style="height:{{videohei}};top:{{videotop}}"></video>
+
+  <!-- qew弹窗竖屏效果 -->
+  <cover-view class="qew_{{ rotate }}_{{ optionNum }}" wx:if="{{showOption && rotate != 'landscape'}}">
+    <!-- 文字内容 -->
+    <cover-view class="option" wx:for="{{options}}" wx:key="index" data-i="{{index}}" bindtap="userChoose">
+      <cover-view class="circle"></cover-view>
+      <cover-view class="title">{{item.title}}</cover-view>
+    </cover-view>
+    <!-- 底部进度条 -->
+    <cover-view class="duration" wx:if="{{ duration != -1  &&  rotate != 'landscape' }}">
+      {{duration }}
+    </cover-view>
+  </cover-view>
+
+
+  <!-- video页面控制ios下无法播放暂停，通过覆盖层的方式 -->
+  <!--<block wx:if='{{ ! videos.length }}'></block>-->
+  <cover-view wx:if='{{ videos.length && !dispart }}' id="controls" bindtap="controls">
+    <cover-image wx:if="{{ isvideostart &&  rotate != 'landscape' }}" class="videostart" src='../../img/videostart.png'></cover-image>
+    <cover-image wx:if="{{ isvideostart &&  rotate == 'landscape' }}" class="videostartli" src='../../img/videostartli.png'></cover-image>
+
+  </cover-view>
+
+  <!--横屏的qte  -->
+  <view class="togal" wx:key="index" >
+  <block wx:for="{{qtemoteitem}}" wx:key="{{index}}">
+    
+    <cover-view wx:if= "{{qteblock[index] == 'true' }}"  class="qtemoteindex" style="position:absolute;left:{{qtemoteiteml[index]}}px;top:{{qtemoteitemy[index]}}px;width:{{qtemoteitemwid[index]}}px;height:{{qtemoteitemhei[index]}}px"  catchtap="tap"   data-action="{{item.action}}" data-success="{{item.success}}"  data-fail="{{item.fail}}" data-i="{{index}}">
+      <cover-image src="{{item.image}}"></cover-image>
+        <!-- <cover-view >{{qteblock}}</cover-view>   -->
+      <!-- <cover-view class="djstext">{{qtedjs}}</cover-view> -->
+    </cover-view>
+    <!-- <cover-view > -->
+      <!-- <cover-image wx:else class="{{qteblock[index] == 'true'? 'qtemote show': 'qtemote'}}" style="position:absolute;left:{{parseInt(item.x)*width}}px;top:{{qtemoteitemy[index]}}px;width:{{parseInt(item.w)*width}}px;height:{{parseInt(item.h)*width}}px"   data-action="{{item.action}}" data-success="{{item.success}}"  data-fail="{{item.fail}}" data-i="{{index}}" src="{{item.image}}" catchtouchmove="touchmove" catchtouchstart="touchstart" catchtouchend='touchend'></cover-image> -->
+       <!-- <cover-view>{{qteblock[index]}}</cover-view>  -->
+      <!-- <cover-view class="djstext">{{qtedjs}}</cover-view> -->
+    <!-- </cover-view> -->
+  </block> 
+  </view >
+
+
+
+  <!-- video页面关注、分享 -->
+  <cover-view wx:if="{{videos.length>0}}" class="rightbottom">
+    <cover-view id="sharevideo">
+        <cover-image wx:if="{{ rotate !== 'landscape' }}" class="sharevideo" src="../../img/sharevideo.png"></cover-image>
+      <cover-image wx:else class="sharevideo" src="../../img/sharevideorota.png"></cover-image>  
+
+      <!-- button中的全角空格必须保留，否则按钮无法触发事件 -->
+      <button class="sharevideobutton" open-type="share" plain="true"> 12 </button>
+    </cover-view>
+    <cover-view id="noticevideo" bindtap='gobackindex'>
+      <!--<button class="noticeshare" bindtap='gobackindex' plain="true" style="color:white;">1</button>-->
+      <cover-image wx:if="{{ rotate !== 'landscape' }}" class="noticevideo" src="../../img/homelin.png"></cover-image>
+      <cover-image wx:else class="noticevideo" src="../../img/homelinrota.png"></cover-image>
+    </cover-view>
+  </cover-view>
+
+  <!-- video页面关注、分享添加提示框 -->
+  <cover-image wx:if="{{ sharetip && rotate != 'landscape' }}" class="sharetip" src="../../img/sharetip.png"></cover-image>
+  <cover-image wx:if="{{ sharetip && rotate == 'landscape' }}" class="sharetipli" src="../../img/sharetipli.png"></cover-image>
+
+  <!-- qew弹窗横屏效果 -->
+  <cover-view class="qewland_{{ rotate }}_{{ optionNum }}" wx:if="{{ ( showOption && rotate == 'landscape' ) }}" style="width:{{ optionNum == 3 ? 153*(options.length) + 25 : 340 }}rpx;">
+    <cover-view class="landscape_pic" wx:for="{{options}}" wx:key="index" data-i="{{index}}" bindtap="userChoose">
+      <cover-image src="{{ item.image }}"></cover-image>
+    </cover-view>
+    <cover-view class="landduration" wx:if="{{ duration != -1  &&  rotate == 'landscape' }}">
+      <cover-image src="{{durationurl}}"></cover-image>
+    </cover-view>
+  </cover-view>
+
+
+
+
+  <!-- 显示图片效果 -->
+  <!-- <cover-image class="videoimage" hidden="{{ isvideoimage }}" src="{{ videoImage }}"></cover-image> -->
+
+  <!-- 继续播放、重新开始 -->
+  <cover-view class="re_on" wx:if="{{ isRe_on && rotate != 'landscape' }}">
+    <cover-view class="on" bindtap='on_play'>
+      <cover-image src="../../img/re.png"></cover-image>
+      <cover-view>继续播放</cover-view>
+    </cover-view>
+
+    <cover-view class="re" bindtap='re_play'>
+      <cover-image src="../../img/on.png"></cover-image>
+      <cover-view>重新开始</cover-view>
+    </cover-view>
+  </cover-view>
+  <cover-view class="re_on_li" wx:if="{{ isRe_on && rotate == 'landscape' }}">
+    <cover-view class="on_li" bindtap='on_play'>
+      <cover-image src="../../img/re_li.png"></cover-image>
+    </cover-view>
+
+    <cover-view class="re_li" bindtap='re_play'>
+      <cover-image src="../../img/on_li.png"></cover-image>
+    </cover-view>
+  </cover-view>
+  <!--part  -->
+
+  <!-- <cover-image src=""></cover-image> -->
+
+  <view wx:if="{{dispart}}" class="partart" style="height:{{videohei}};top:{{videotop}}">
+    <image src="{{partitemimg}}" class="partabo"></image>
+    <block wx:for="{{partitem}}" class="partartview" wx:key="index">
+        <image src="{{item.image}}" wx:if="item.action == 'click' || item.action == 'doubleclick'"  style="position:absolute;left:{{partiteml[index] }}px;top:{{partitemy[index]}}px;width:{{partitemwid[index]}}px;height:{{partitemhei[index]}}px;z-index:10001;"  bindtap="partap" data-action="{{item.action}}" data-i="{{index}}"></image>
+ <image src="{{item.image}}" wx:else  style="position:absolute;left:{{item.x*width/100 }}px;top:{{item.y*width/100+ parseInt(videotop)}}px;width:{{item.w*width/100}}px;height:{{item.h*width/100}}px;z-index:10001;" bindtouchmove="partouchmove" bindtouchstart="partouchstart" data-action="{{item.action}}" data-i="{{index}}"></image>
+    </block>
+  </view>
+
+</block>
+<block wx:elif="{{endanalyse==2}}">
+
+  <!-- ending分析 -->
+  <view class="endbox">
+    <view class="endanalyse" wx:if="{{ rotate != 'landscape' }}">
+      <image class="loadingleft" src="../../img/endany.png"></image>
+      <!-- 动图 -->
+      <image class="loadingpic" src="../../img/ending.gif"></image>
+      <view class="progressbarline">
+        <cover-view class='fill' style="width:{{count}}%"></cover-view>
+      </view>
+    </view>
+
+    <cover-view class="endanalyseli" wx:else>
+      <image class="loadingleftli" src="../../img/endanyli.png"></image>
+      <!-- 动图 -->
+      <image class="loadingpicli" src="../../img/endingli.gif"></image>
+      <cover-view class="progressbarshu">
+        <cover-view class='fill' style="height:{{count}}%"></cover-view>
+      </cover-view>
+    </cover-view>
+  </view>
+</block>
+<block wx:elif="{{endanalyse==3}}">
+
+  <view class="endback"></view>
+
+</block>

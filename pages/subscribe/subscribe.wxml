@@ -1,0 +1,27 @@
+<view class="subscribebox">
+  <block wx:if="{{sub.length}}">
+    <scroll-view scroll-y class='subscroll'>
+      <view class='typebox'>
+        <view class='types'>
+          <view class='typelist'>
+            <block wx:for="{{sub}}" wx:key="{{key}}">
+              <view class='typeitem'>
+                <view class='imgbox' bindtap='totype'>
+                  <image src='{{item.pic}}' data-id="{{item.pro_id}}" data-name='{{item.name}}'></image>
+                </view>
+              </view>
+            </block>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </block>
+  <block wx:else>
+    <view class='nodatabox'>
+      <view class='nodataimg'>
+        <image src='../../img/nosubscribe.png'></image>
+      </view>
+      <view class='nodatatitle'>你还没有订阅任何视频，快去订阅吧</view>
+    </view>
+  </block>
+</view>

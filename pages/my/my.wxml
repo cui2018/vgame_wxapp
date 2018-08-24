@@ -1,0 +1,44 @@
+<view class="mybox">
+  <view class='mytop'>
+    <image src='../../img/my_back.jpg'></image>
+    <view class='namebox'>
+      <image src='{{oauth ? userinfo.headimg : orginsrc}}'></image>
+    </view>
+    <view class='title' wx:if="{{oauth}}">{{userinfo.nick}}</view>
+    <button open-type="getUserInfo" bindgetuserinfo="getinfo" lang='zh_CN' wx:if="{{!oauth}}">请授权</button>
+  </view>
+  
+  <view class='list'>
+     <view class='item' bindtap='tosubscribe'>
+      <view class='titleimg'>
+        <image src='../../img/my_subscribe.png'></image>
+      </view>
+      <view class='titlename'>我的订阅</view>
+      <view class='titlearrow'>
+        <image src='../../img/my_arrow.png'></image>
+      </view> 
+    </view> 
+    <!-- <view class='item' bindtap='tobuy'>
+      <view class='titleimg'>
+        <image src='../../img/my_buy.png'></image>
+      </view>
+      <view class='titlename'>购买记录</view>
+      <view class='titlearrow'>
+        <image src='../../img/my_arrow.png'></image>
+      </view>
+    </view> -->
+    <view class='item' bindtap='tocontact'>
+      <view class='titleimg'>
+        <image src='../../img/my_contact.png'></image>
+      </view>
+      <view class='titlename'>联系我们</view>
+      <view class='titlearrow'>
+        <image src='../../img/my_arrow.png'></image>
+      </view>
+    </view>
+  </view>
+  <view>
+      <cservice></cservice>  
+    <button open-type="contact" class="contactus" ></button>
+  </view>
+</view>

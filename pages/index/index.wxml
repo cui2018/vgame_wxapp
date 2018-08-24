@@ -1,0 +1,190 @@
+<view class='indexbox'>
+    <scroll-view scroll-y class='indexscroll'>
+      <view class='publicaccount' >
+         <block wx:if="{{collect}}">
+          <view class='publicimg' bindtap='showconcern'>
+            <image src='../../img/collect.png'></image>
+          </view>
+        </block>
+      </view>
+      <view class='banner-swiper'>
+        <swiper circular="{{circular}}" class='swiperbox' previous-margin="{{previousmargin}}" next-margin="{{nextmargin}}" autoplay="{{autoplay}}" current='{{swiperCurrent}}' interval="5000" bindchange="swiperChange">
+          <block wx:for="{{banners}}" wx:key="key">
+            <swiper-item class="bannerbox">
+            <view class="slideimg{{index == swiperCurrent ? ' active' : ''}}">
+              <image src='{{item.pic}}' data-id="{{index}}" id="{{item.id}}" data-name="{{item.name}}" data-result="{{item.gameresult_state}}" bindtap='totype'></image>
+              <view class='bannerbottom'>
+                <view class='bscore'>{{item.score}}</view>
+                <view class='bright'>
+                  <view class='bruser'>{{item.subuser}}</view>
+                  <view class='brsub' data-state="{{item.subscribe_state}}" data-index="{{index}}" data-id="{{item.id}}" wx:if="{{!item.subscribe_state}}" style='background:{{item.subscribe_style.sub.bgcolor}}'>
+                    <form bindsubmit="sendform" report-submit="ture" data-state="{{item.subscribe_state}}" data-index="{{index}}" data-id="{{item.id}}"><button formType="submit" class="formbtn"></button></form>
+                    +订阅
+                  </view> 
+                  <view class='brsub' data-state="{{item.subscribe_state}}" data-index="{{index}}" data-id="{{item.id}}" bindtap='cancelsubscribe' wx:else>已订阅</view> 
+                </view>
+              </view>
+              </view>
+              <view class='slidetext' style="color:#fff;">{{item.name}}<text wx:if="{{item.project_new}}">NEW</text></view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view class='matebox'  bindtap='showmate'>
+        <image src='../../img/index_mate.png'></image>
+        <text>匹配记录</text>
+        <view class='dot' wx:if="{{hasmate}}"></view>
+        <button open-type="getUserInfo" bindgetuserinfo="getinfo" lang='zh_CN'></button>
+      </view>
+      <block wx:if="{{concern}}">
+        <concern bindcloseconcern="closeconcern"></concern>
+      </block>
+      <block wx:if="{{mate}}">
+        <view class='mateboxwrapper'>
+          <view class='matetop'>
+            <image src='../../img/mateback.png'></image>
+            <view class='matetitle'>匹配记录</view>
+          </view>
+          <view class='matecon'>
+            <view class='mateconbox'>
+              <scroll-view class="mateleft" scroll-y>
+                <view class='typelist'>
+                  <view class='typeitem' wx:for="{{matelist}}" wx:key="{{key}}" bindtap='matefriend' data-id='{{item.game_id}}' data-index="{{index}}">
+                    <view class='gamename {{gameCurrent == index ? "activename":""}}'>{{item.name}}</view>
+                    <view class='gamestate' wx:if="{{item.gamerecord_red_state}}"></view>
+                  </view>
+                </view>
+              </scroll-view>
+              <scroll-view class="materight" scroll-y  wx:if="{{friendlist.length}}">
+                <view class='matelist'>
+                  <view class='mateitem' wx:for="{{friendlist}}" wx:key="{{key}}">
+                    <view class='mateimg'>
+                      <image src='{{item.friend.headimg}}'></image>
+                      <view class='mateitemdot' wx:if="{{item.friendrecord_red_state}}"></view>
+                    </view>
+                    <view class='matenamebox'>
+                      <view class='matename'>{{item.friend.nick}}</view>
+                      <view class='mateper'>{{item.friend_score.score}}%</view>
+                    </view>
+                    <view class='matebtn' bindtap='makephoto' data-id="{{item.friend.friend_openid}}" data-gameid="{{item.game_id}}">生成图片</view>
+                  </view>
+                </view>
+              </scroll-view>
+              <view class='nomate' wx:else>
+                <view class='nomateimg'>
+                  <image src='../../img/nomate.png'></image>
+                </view>
+                <view class='nomatetitle'>快找好友看看你们的契合度</view>
+              </view>
+            </view>
+            <view class='matebtnbox'>
+              <view class='mateconbtn'>邀请好友</view>
+              <button open-type='share'></button>
+            </view>
+            <!-- <view class='mateconbtn'>邀请好友</view> -->
+            <!-- <view class=></view> -->
+          </view>
+          <view class='closemate' bindtap='closemate'>
+            <image src='../../img/close.png'></image>
+          </view>
+          <!-- <view class='matelist'>
+            <view class='mateitem'>
+              <view class='mateimg'>
+                <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3091043133,212922888&fm=27&gp=0.jpg'></image>
+                <view class='matedot' v-if="{{}}"></view>
+              </view>
+              <view class='matename'>嘻嘻嘻嘻aws</view>
+              <view class='mateper'>契合度<text>98%</text></view>
+              <view class='matebtn'>生成图片</view>
+            </view>
+            <view class='mateitem'>
+              <view class='mateimg'>
+                <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3091043133,212922888&fm=27&gp=0.jpg'></image>
+              </view>
+              <view class='matename'>嘻嘻嘻嘻aws</view>
+              <view class='mateper'>契合度<text>98%</text></view>
+              <view class='matebtn'>生成图片</view>
+            </view>
+            <view class='mateitem'>
+              <view class='mateimg'>
+                <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3091043133,212922888&fm=27&gp=0.jpg'></image>
+              </view>
+              <view class='matename'>嘻嘻嘻嘻aws</view>
+              <view class='mateper'>契合度<text>98%</text></view>
+              <view class='matebtn'>生成图片</view>
+            </view>
+            <view class='mateitem'>
+              <view class='mateimg'>
+                <image src='https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=3091043133,212922888&fm=27&gp=0.jpg'></image>
+              </view>
+              <view class='matename'>嘻嘻嘻嘻aws</view>
+              <view class='mateper'>契合度<text>98%</text></view>
+              <view class='matebtn'>生成图片</view>
+            </view>
+          </view>
+          <view class='matebottom'>
+            <view class='matepage matepre'>
+              <image src='../../img/prev.png'></image>
+            </view>
+            <view class='mateinvite'>邀请好友</view>
+            <view class='matepage matenext'>
+              <image src='../../img/next.png'></image>
+            </view>
+          </view> -->
+        </view>
+      </block>
+    </scroll-view>
+   <!-- <block wx:if="{{newhand}}"> 
+    <view class='newswiper'>
+      <swiper indicator-dots="true" current='{{newCurrent}}' bindchange='newchange' indicator-color="#ccc" autoplay="{{false}}" interval="5000">
+        <block wx:for="{{newswiper}}" wx:key="{{key}}">
+          <swiper-item class="newitem">
+            <image src="{{item}}" class="slide-image" width="355" height="150"/>
+            <view class='newhand' wx:if="{{newCurrent == 0}}">
+              <image class='newhand' src='../../img/new_hand.png'></image>
+            </view>
+          </swiper-item>
+        </block>
+      </swiper>
+      <view class='newclose' wx:if="{{newCurrent == 2}}" bindtap='newstate'></view>
+    </view>
+   </block>  -->
+    <block wx:if="{{!newhand}}"> 
+      <view class='newswiper' bindtap="tovideo" data-result="1" data-name="美丽的邂逅" data-id="0">
+        <image src="../../img/new01.png"></image>
+      </view>
+      <view class="circle" bindtap="tovideo">
+      <image src="../../img/new_hand.png" class="newpointer"></image>
+      </view> 
+    </block>
+    <block wx:if="{{cancelsub}}">
+      <view class='cancelsubbox'>
+        <view class='cancelsub'>
+          <view class='cancelsubcon'>
+            <view class='cancelintro'>取消后将无法收到游戏更新提醒哦</view>
+            <view class='cancelcon'>真的要取消吗</view>
+          </view>
+          <view class='cancelbtngroup'>
+            <view class='cancelbtn' bindtap='confirmcancel'>确认取消</view>
+            <view class='cancelbtn' style='color:#10C840' bindtap='closecancel'>我再想想</view>
+          </view>
+        </view>
+      </view>  
+    </block>
+    <block wx:if="{{subalert}}">
+      <view class='subalertbox'>
+        <view class='subalert'>
+          <view class='subalerttop'>
+            <image src='../../img/index_sub.png'></image>
+          </view>
+          <view class='subalertcon'>
+            <view class='subalerttext'>订阅后将收到</view>
+            <view class='subalerttext'>我们的游戏更新提醒哦</view>
+          </view>
+          <view class='subalertclose' bindtap='closesub'>
+            <image src='../../img/close.png'></image>
+          </view>
+        </view>
+      </view> 
+    </block>
+</view>

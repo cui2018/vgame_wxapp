@@ -1,0 +1,7 @@
+<!--pages/newhand/newhand.wxml-->
+<view>
+  <image src="../../img/new02.png" bindtap="toplay"></image>
+  <view class="circle" bindtap="toplay">
+    <image src="../../img/new_hand.png" class="newpointer"></image>
+    </view> 
+</view>

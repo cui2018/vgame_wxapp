@@ -1,0 +1,10 @@
+{
+  "navigationBarTitleText": "不眨眼",
+    "usingComponents": {
+      "dialog": "../../components/dialog/dialog",
+      "alert": "../../components/alert/alert",
+      "concern": "../../components/concern/concern",
+      "score": "../../components/score/score",
+      "discuss": "../../components/discuss/discuss"
+  }
+}
